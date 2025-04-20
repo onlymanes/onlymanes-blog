@@ -1,0 +1,13 @@
+title: onlymanes Blog
+url: "https://onlymanes.ai"
+baseurl: "/about"
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+_posts/2025-04-20-hello-world.md
+assets/img/cover.jpg
+![配图](/about/assets/img/cover.jpg)
+<meta http-equiv="refresh" content="0; url=/about/">
+echo "onlymanes.ai" > CNAME
+
