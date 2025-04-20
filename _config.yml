@@ -2,7 +2,8 @@
 title: onlymanes Blog
 description: A personal blog about life & code
 url: "https://onlymanes.ai"
-baseurl: "/about"
+baseurl: ""
+url: "https://onlymanes.ai"
 
 theme: minima
 # remote_theme: pages-themes/minima@v0.2.0
