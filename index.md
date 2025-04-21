@@ -7,7 +7,7 @@ title: onlymanes Blog
 body {
   background:
     url('/assets/img/cover.jpg') 
-    no-repeat center center fixed;
+    no-repeat;
   background-size: cover;
 }
 </style>
