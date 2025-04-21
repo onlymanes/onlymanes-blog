@@ -15,3 +15,6 @@ defaults:
     values:
       head: |
         <link rel="stylesheet" href="/assets/css/custom.css">
+
+include:
+  - _includes/footer.html
