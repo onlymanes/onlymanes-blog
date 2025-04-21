@@ -3,7 +3,7 @@
 
 html,body{
   margin:0;
-  background:#100016 !important;          /* deep purple?black */
+  background:#100016 !important; /* deep purple?black */
 }
 
 body::before{
@@ -12,9 +12,8 @@ body::before{
   top:50%;
   right:0;
   transform:translateY(-50%);
-  width:600px;          /* original image size */
+  width:600px;
   height:399px;
-
   background:
     linear-gradient(to left,
         rgba(16,0,22,0) 0%,
@@ -25,5 +24,5 @@ body::before{
   pointer-events:none;
 }
 
-/* hide the ¡°subscribe via RSS¡± link */
+/* hide ¡°subscribe via RSS¡± */
 .rss-subscribe{display:none}
