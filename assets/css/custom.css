@@ -6,16 +6,16 @@ html,body{
   body::before{
     content:"";
     position:fixed;
-    top:20px;
+    top:20px;              /* 与页面顶端间距 */
     left:50%;
-    transform:translateX(30%);
+    transform:translateX(-50%);   /* 真正水平居中 */
   
-    width:600px;
+    width:600px;           /* 按图片原像素写 */
     height:399px;
     background:url("/assets/img/cover.jpg") no-repeat center top;
-    background-size:auto;
+    background-size:auto;  /* 保留原始大小 */
   
-    z-index:-1;/
+    z-index:-1;            /* ← 去掉多余的 / */
     pointer-events:none;
   }
   
