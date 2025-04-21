@@ -6,15 +6,16 @@ html,body{
   body::before{
     content:"";
     position:fixed;
-    left:10%; top:10%;
-    transform:translate(-10%,-5%);
-    
-    width:30vw;
-    height:30vh;
+    top:40px;
+    left:50%;
+    transform:translateX(-50%);
   
-    background:url("/assets/img/cover.jpg") center/contain no-repeat;
-    opacity:.9;
-    z-index:-1;
+    width:auto;
+    height:auto;
+    background:url("/assets/img/cover.jpg") no-repeat center top;
+    background-size:auto;
+  
+    z-index:-1;/
     pointer-events:none;
   }
   
