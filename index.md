@@ -2,7 +2,7 @@
 layout: home
 ---
 
-> Welcome to onlymanes Blog！Here lists my articles.
+> Welcome to onlymanes Blog! There lists my articles.
 
 <ul>
   {% for post in site.posts %}
@@ -11,9 +11,6 @@ layout: home
     </li>
   {% endfor %}
 </ul>
-
-include:
-  - assets/img/cover.jpg
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
