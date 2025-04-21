@@ -1,10 +1,10 @@
-html,body{
-    margin:0;
+html, body {
+    margin: 0;
     background: #100016 !important;
     min-height: 100vh;
 }
 
-body::before{
+body::before {
     content: "";
     position: fixed;
     right: 0;
@@ -12,23 +12,22 @@ body::before{
     transform: translateY(-50%);
     width: 60vw;
     height: 70vh;
-    background: 
-        linear-gradient(
-            to left, 
-            rgba(16,0,22,0) 0%,
-            rgba(16,0,22,1) 70%
-        ),
-        url("/assets/img/cover.jpg") no-repeat right center/cover;
+    background-image: 
+        linear-gradient(to left, rgba(16,0,22,0) 0%, rgba(16,0,22,1) 70%),
+        url("/assets/img/cover.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
     z-index: -1;
     pointer-events: none;
     border-radius: 8px 0 0 8px;
 }
 
-.rss-subscribe {
+.feed-subscribe {
     display: none !important;
 }
 
-.site-footer {
+.main-content {
     position: relative;
     z-index: 1;
 }
