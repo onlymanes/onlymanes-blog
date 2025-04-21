@@ -1,6 +1,6 @@
 html, body {
     margin: 0;
-    background: #100016 !important;
+    background: #620286 !important;
     min-height: 100vh;
     background-image: none !important;
 }
@@ -15,7 +15,7 @@ body::before {
     height: 70vh;
     background-image: 
         linear-gradient(to left, rgba(16,0,22,0) 0%, rgba(16,0,22,1) 70%),
-        url("/assets/img/cover.jpg") !important;
+        url("{{ '/assets/img/cover.jpg' | relative_url }}");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: cover;
