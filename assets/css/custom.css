@@ -3,7 +3,7 @@
 
 html,body{
   margin:0;
-  background:#100016 !important; /* deep purple?black */
+  background:#100016 !important;
 }
 
 body::before{
@@ -24,5 +24,4 @@ body::before{
   pointer-events:none;
 }
 
-/* hide ¡°subscribe via RSS¡± */
 .rss-subscribe{display:none}
