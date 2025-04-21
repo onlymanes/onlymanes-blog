@@ -31,7 +31,7 @@ body::before {
     height: 70vh;
     background:
         linear-gradient(to left, rgba(16,0,22,0) 0%, rgba(16,0,22,1) 70%),
-        url("https://yourdomain.com/assets/img/cover.jpg"); /* 使用绝对路径进行测试 */
+        url("https://yourdomain.com/assets/img/cover.jpg");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: cover;
