@@ -1,9 +1,7 @@
 # _config.yml
 title: onlymanes Blog
-description: A personal blog about life & code
 url: "https://onlymanes.ai"
 baseurl: ""
-url: "https://onlymanes.ai"
 
 theme: minima
 
