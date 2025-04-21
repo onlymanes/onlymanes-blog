@@ -20,23 +20,4 @@ html, body {
     min-height: 100vh;
     background-image: none !important;
 }
-
-body::before {
-    content: "";
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60vw;
-    height: 70vh;
-    background:
-        linear-gradient(to left, rgba(16,0,22,0) 0%, rgba(16,0,22,1) 70%),
-        url("https://onlymanes.ai/assets/img/cover.jpg");
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: cover;
-    z-index: -1;
-    pointer-events: none;
-    border-radius: 8px 0 0 8px;
-}
 </style>
