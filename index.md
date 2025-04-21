@@ -31,7 +31,7 @@ body::before {
     height: 70vh;
     background:
         linear-gradient(to left, rgba(16,0,22,0) 0%, rgba(16,0,22,1) 70%),
-        url("https://yourdomain.com/assets/img/cover.jpg");
+        url("https://onlymanes.ai/assets/img/cover.jpg");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: cover;
@@ -64,5 +64,3 @@ body::after {
     background: transparent !important;
 }
 </style>
-
-{% include footer.html %}
