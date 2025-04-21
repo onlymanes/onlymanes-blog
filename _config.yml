@@ -1,3 +1,5 @@
 include:
   - assets/img/cover.jpg
   - _includes/footer.html
+baseurl: ""
+url: "https://onlymanes.ai"
