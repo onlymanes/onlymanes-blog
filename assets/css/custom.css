@@ -1,11 +1,24 @@
-body::before {
+/* 1. 整站背景改成黑色 */
+html,body{
+    margin:0;
+    background:#000;          /* 纯黑 */
+  }
+  
+  /* 2. 覆盖图：居中但稍向上，保持比例 */
+  body::before{
     content:"";
     position:fixed;
-    inset:0;
-    background:url("/assets/img/cover.jpg") 
-               center/cover
-               no-repeat;
-    opacity:.05;
-    z-index:-1;
+    /* 让图片在窗口上方一点：translateY(-10%) 即向上移 10%  */
+    left:50%; top:50%;
+    transform:translate(-50%,-10%);
+    
+    /* 尺寸：最大宽 80vw，最大高 80vh（留一点边距） */
+    width:80vw;
+    height:80vh;
+  
+    background:url("/assets/img/cover.jpg") center/contain no-repeat;
+    /* 可选透明度，若想半透明再加：opacity:.9; */
+    z-index:-1;               /* 不遮挡正文 */
     pointer-events:none;
-}
+  }
+  
