@@ -1,0 +1,3 @@
+include:
+  - assets/img/cover.jpg
+  - _includes/footer.html
