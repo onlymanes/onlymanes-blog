@@ -1,6 +1,7 @@
+# _config.yml
 title: onlymanes Blog
 url: "https://onlymanes.ai"
-baseurl: ""           # 站点部署在根域
+baseurl: ""
 
 theme: minima
 
@@ -13,6 +14,7 @@ defaults:
       path: ""
     values:
       head: |
+        <!-- 加 relative_url，任何基路径都能正确引用 -->
         <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 include:
