@@ -13,9 +13,7 @@ defaults:
       path: ""
     values:
       head: |
-  <!-- theme¡¯s main.css is already in <head>.
-       adding link again puts our file *after* it -->
-  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+      <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 
 include:
