@@ -3,7 +3,7 @@
 
 html,body{
   margin:0;
-  background:#100016 !important;      /* make sure it beats theme¡¯s rule */
+  background:#100016 !important;          /* deep purple?black */
 }
 
 body::before{
@@ -12,10 +12,9 @@ body::before{
   top:50%;
   right:0;
   transform:translateY(-50%);
-  width:600px;
+  width:600px;          /* original image size */
   height:399px;
 
-  /* liquid tag will be rendered now */
   background:
     linear-gradient(to left,
         rgba(16,0,22,0) 0%,
@@ -26,5 +25,5 @@ body::before{
   pointer-events:none;
 }
 
-/* hide the feed link */
+/* hide the ¡°subscribe via RSS¡± link */
 .rss-subscribe{display:none}

@@ -1,6 +1,6 @@
 title: onlymanes Blog
 url: "https://onlymanes.ai"
-baseurl: ""
+baseurl: ""          # site lives at the root
 
 theme: minima
 
@@ -12,11 +12,8 @@ defaults:
   - scope:
       path: ""
     values:
-      head: |           # ¡û this line ends with a pipe
+      head: |
         <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-        # ¡ü every line inside the multi?line value
-        #   must be indented at least two spaces more
-        #   than ¡°head: |¡±
 
 include:
   - _includes/footer.html
