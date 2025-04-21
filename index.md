@@ -31,7 +31,7 @@ body::before {
     height: 70vh;
     background:
         linear-gradient(to left, rgba(16,0,22,0) 0%, rgba(16,0,22,1) 70%),
-        url("/assets/img/cover.jpg");
+        url("https://via.placeholder.com/800x600"); /* 使用占位符图片进行测试 */
     background-repeat: no-repeat;
     background-position: right center;
     background-size: cover;
