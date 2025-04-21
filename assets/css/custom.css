@@ -1,6 +1,6 @@
 html,body{
     margin:0;
-    background:#100016 !important;   /* purple?black */
+    background:#100016 !important;
   }
   
   body::before{
@@ -21,6 +21,5 @@ html,body{
     pointer-events:none;
   }
   
-  /* hide RSS link */
   .rss-subscribe{display:none}
   
