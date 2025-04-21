@@ -13,7 +13,10 @@ defaults:
       path: ""
     values:
       head: |
-        <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+  <!-- theme¡¯s main.css is already in <head>.
+       adding link again puts our file *after* it -->
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
 
 include:
   - _includes/footer.html

@@ -1,26 +1,30 @@
+---
+---
+
 html,body{
-    margin:0;
-    background:#100016;
-  }
-  
-  body::before{
-    content:"";
-    position:fixed;
-    top:50%;
-    right:0;
-    transform:translateY(-50%);
-  
-    width:600px;
-    height:399px;
-  
-    background:
-      linear-gradient(to left,
-          rgba(16,0,22,0) 0%,
-          rgba(16,0,22,1) 60%),
-      url("{{ '/assets/img/cover.jpg' | relative_url }}") no-repeat right center;
-    background-size:100% 100%, auto;
-    z-index:-1;
-    pointer-events:none;
-  }
-  
-  .rss-subscribe{ display:none; }  
+  margin:0;
+  background:#100016 !important;      /* make sure it beats theme¡¯s rule */
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+  width:600px;
+  height:399px;
+
+  /* liquid tag will be rendered now */
+  background:
+    linear-gradient(to left,
+        rgba(16,0,22,0) 0%,
+        rgba(16,0,22,1) 60%),
+    url("{{ '/assets/img/cover.jpg' | relative_url }}") no-repeat right center;
+  background-size:100% 100%, auto;
+  z-index:-1;
+  pointer-events:none;
+}
+
+/* hide the feed link */
+.rss-subscribe{display:none}
