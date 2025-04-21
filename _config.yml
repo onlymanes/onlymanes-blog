@@ -14,7 +14,8 @@ defaults:
       path: ""
     values:
       head: |
-        <link rel="stylesheet" href="/assets/css/custom.css">
+        <!-- 加 relative_url，任何基路径都能正确引用 -->
+        <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 include:
   - _includes/footer.html

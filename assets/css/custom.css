@@ -1,31 +1,30 @@
-/* --- 背景底色 ----------------------------------------------------------- */
-html, body{
+/* ---------- 基础黑紫背景 ---------- */
+html,body{
     margin:0;
-    background:#100016;        /* 深黑紫 */
+    background:#100016;               /* 黑紫色 */
   }
   
-  /* --- 右侧照片 ---------------------------------------------------------- */
+  /* ---------- 右侧固定尺寸照片 + 渐隐 ---------- */
   body::before{
     content:"";
     position:fixed;
-    top:50%;                   /* 垂直居中 */
-    right:0;                   /* 靠最右 */
-    transform:translateY(-50%);/* 向上移自身 50% 实现居中 */
+    top:50%;               /* 垂直居中 */
+    right:0;               /* 贴右侧 */
+    transform:translateY(-50%);
   
-    /* 照片原始尺寸 */
-    width:600px;
+    width:600px;           /* 封面原始尺寸 */
     height:399px;
   
-    /* 先放渐隐蒙版，再放照片（两层 background）*/
+    /* 两层背景：下层是照片，上层是向左渐隐 */
     background:
-      /* 渐隐：从透明过渡到背景色 */
       linear-gradient(to left,
           rgba(16,0,22,0) 0%,
-          rgba(16,0,22,0.9) 60%),
-      url("/assets/img/cover.jpg") no-repeat right center;
-    background-size:           /* 第一层渐隐拉满容器，第二层保持实际大小 */
-      100% 100%,
-      auto;
+          rgba(16,0,22,1) 60%),
+      url("{{ '/assets/img/cover.jpg' | relative_url }}") no-repeat right center;
+    background-size:100% 100%, auto;
     z-index:-1;
     pointer-events:none;
-  }  
+  }
+  
+  /* ---------- 隐藏 subscribe via RSS ---------- */
+  .rss-subscribe{ display:none; }  
