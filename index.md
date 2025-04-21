@@ -40,6 +40,19 @@ body::before {
     border-radius: 8px 0 0 8px;
 }
 
+/* Debugging: Add a solid color to see if the pseudo-element is present */
+body::after {
+    content: "Debug";
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
 .rss-subscribe, .feed-subscribe {
     display: none !important;
     visibility: hidden !important;
