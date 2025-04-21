@@ -3,4 +3,4 @@ layout: home
 title: onlymanes Blog
 ---
 
-> Welcome to onlymanes Blog£¡Here lists my articles.
+> Welcome to onlymanes Blogï¼Here lists my articles.
