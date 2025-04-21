@@ -1,6 +1,6 @@
 title: onlymanes Blog
 url: "https://onlymanes.ai"
-baseurl: ""           # 站点部署在根域
+baseurl: ""
 
 theme: minima
 

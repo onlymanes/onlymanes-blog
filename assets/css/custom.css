@@ -1,21 +1,18 @@
-/* ---------- 基础黑紫背景 ---------- */
 html,body{
     margin:0;
-    background:#100016;               /* 黑紫色 */
+    background:#100016;
   }
   
-  /* ---------- 右侧固定尺寸照片 + 渐隐 ---------- */
   body::before{
     content:"";
     position:fixed;
-    top:50%;               /* 垂直居中 */
-    right:0;               /* 贴右侧 */
+    top:50%;
+    right:0;
     transform:translateY(-50%);
   
-    width:600px;           /* 封面原始尺寸 */
+    width:600px;
     height:399px;
   
-    /* 两层背景：下层是照片，上层是向左渐隐 */
     background:
       linear-gradient(to left,
           rgba(16,0,22,0) 0%,
@@ -26,5 +23,4 @@ html,body{
     pointer-events:none;
   }
   
-  /* ---------- 隐藏 subscribe via RSS ---------- */
   .rss-subscribe{ display:none; }  
