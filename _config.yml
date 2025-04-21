@@ -2,11 +2,6 @@ title: onlymanes Blog
 url: "https://onlymanes.ai"
 baseurl: ""
 
-theme: minima
-
-plugins:
-  - jekyll-seo-tag
-
 defaults:
   - scope:
       path: ""
