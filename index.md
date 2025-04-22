@@ -16,7 +16,7 @@ layout: home
 <style>
 html, body {
     margin: 0;
-    background: #620286 !important;
+    background:rgb(80, 2, 108) !important;
     min-height: 100vh;
 }
 </style>
