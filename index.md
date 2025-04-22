@@ -14,7 +14,7 @@ layout: default
 </div>
 
 <div class="post-section">
-  <p>&emsp;&emsp;> Welcome to onlymanes Blog! There lists my articles.</p>
+  <p><br>&emsp;&emsp;> Welcome to onlymanes Blog! There lists my articles.</p>
   <ul class="post-list">
     {% for post in site.posts %}
       <li class="post-item">
