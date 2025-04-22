@@ -28,7 +28,7 @@ layout: default
 <div class="content-container">
     <div class="main-layout">
         <div class="text-section">
-            <!-- ÄãµÄÎÄ×ÖÄÚÈİ -->
+            <!-- Your content -->
         </div>
         
         <div class="cover-wrapper">
