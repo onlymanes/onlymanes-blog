@@ -66,3 +66,23 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 15px #01f83f;
   }
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+    color: #00B4D8 !important;
+    text-decoration: none !important;
+}
+
+.post-content a,
+.footer a,
+.nav-link {
+    color: #00B4D8 !important;
+}
+
+body a {
+    color: #00B4D8 !important;
+}
