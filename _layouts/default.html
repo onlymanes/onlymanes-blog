@@ -3,87 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>onlymanes - Blog</title>
+    <title>onlymanes Blog</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <style>
-        .layout-container {
-            display: flex;
-            flex-wrap: wrap;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .main-content {
-            flex: 1 1 60%;
-            min-width: 300px;
-            padding: 20px;
-            order: 1;
-        }
-
-        .cover-container {
-            flex: 1 1 35%;
-            min-width: 280px;
-            padding: 20px;
-            order: 2;
-            position: relative;
-        }
-
-        @media (min-width: 992px) {
-            .layout-container {
-                flex-direction: row;
-                gap: 5%;
-            }
-            .main-content {
-                order: 1;
-            }
-            .cover-container {
-                position: sticky;
-                top: 20px;
-                height: calc(100vh - 40px);
-            }
-        }
-
-        @media (max-width: 991px) {
-            .layout-container {
-                flex-direction: column;
-            }
-            .cover-container {
-                order: 3;
-                width: 100%;
-                height: 50vh;
-            }
-        }
-
-        .cover-image {
-            width: 100%;
-            height: 100%;
-            background: url("https://onlymanes.ai/assets/img/cover.jpg") center/cover no-repeat;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(1, 248, 63, 0.4);
-        }
-
-        body:not(.home) .logo-container {
-            display: none;
-        }
-    </style>
 </head>
-<body class="{% if page.url == '/' %}home{% else %}post{% endif %}">
-    <div class="layout-container">
-        <main class="main-content">
+<body>
+    <div class="layout-wrapper">
+        <main class="content-main">
             {{ content }}
         </main>
 
-        <div class="cover-container">
-            <div class="cover-image"></div>
-        </div>
-
-        {% if page.url == '/' %}
-        <div class="logo-container">
-            <img src="https://onlymanes.ai/assets/img/onlymanes.png" 
-                 alt="Logo"
-                 class="logo-image">
-        </div>
-        {% endif %}
+        <aside class="cover-aside">
+            <div class="cover-image" 
+                 style="background-image: url('/assets/img/cover.jpg')"></div>
+        </aside>
     </div>
 </body>
 </html>

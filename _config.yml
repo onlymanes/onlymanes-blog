@@ -1,12 +1,13 @@
-# _config.yml
 title: onlymanes Blog
-theme: jekyll-theme-minimal
+description: Personal blog sharing creative ideas
+baseurl: /
+url: https://onlymanes.ai
+
 plugins:
   - jekyll-sitemap
   - jekyll-feed
 
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default
+exclude:
+  - node_modules
+  - Gemfile.lock
+  - vendor
