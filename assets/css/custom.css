@@ -29,8 +29,17 @@ body::before {
     position: relative;
     z-index: 1;
     background: transparent !important;
+    padding-left: 30px;
+    max-width: 65%;
 }
 
 a {
     color: #00B4D8 !important;
+}
+
+.post header,
+.post .post-content {
+    background: rgb(84, 3, 113) !important;
+    position: relative;
+    z-index: 2;
 }
