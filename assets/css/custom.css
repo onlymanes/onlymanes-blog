@@ -5,46 +5,63 @@ body {
     background-image: none !important;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    left: 53%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 600px;
-    height: 399px;
-    background: url("https://onlymanes.ai/assets/img/cover.jpg");
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto;
+.cover-container {
+    position: relative;
     z-index: 0;
-    pointer-events: none;
-}
+    margin-left: 30px;
+  }
 
-a,
-a:visited,
-a:hover {
-    color: #00B4D8 !important;
-}
+  @media (min-width: 992px) {
+    .cover-container {
+      position: fixed;
+      width: 40vw;
+      height: 60vh;
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%);
+      margin-left: 0;
+    }
+    
+    .main-content {
+      max-width: 50%;
+      padding-right: 45%;
+    }
+  }
 
-.main-content {
-    position: relative;
-    z-index: 1;
-    background: transparent !important;
-    padding-left: 30px;
-    max-width: 65%;
-}
+  @media (max-width: 991px) {
+    .cover-container {
+      width: 300px;
+      height: 200px;
+      margin: 30px auto;
+    }
+  }
 
-.post,
-.post header,
-.post .post-content {
-    background: rgb(84, 3, 113) !important;
-    position: relative;
-    z-index: 2;
-}
+  @media (max-width: 767px) {
+    .cover-container {
+      width: 100%;
+      height: 35vh;
+      margin: 20px 0;
+      order: 2;
+    }
+  
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .main-content {
+      max-width: 100%;
+      padding: 0 15px;
+      order: 1;
+    }
+  }
 
-.rss-subscribe, 
-.feed-subscribe {
-    display: none !important;
-    visibility: hidden !important;
-}
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    background: url("https://onlymanes.ai/assets/img/cover.jpg") no-repeat center center;
+    background-size: contain;
+    opacity: 0.9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+  }
