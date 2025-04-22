@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>onlymanes Blog</title>
 
     <link rel="stylesheet" href="/assets/css/extra.css">
-
     <link rel="icon" href="/assets/img/onlymanes.png" type="image/png">
 
     <style>
@@ -27,10 +25,16 @@
 
         @media (max-width: 991px) {
             .cover-wrapper {
-                margin: 0 auto 0 auto;
+                margin: 0 auto !important;
+                margin-left: 0 !important;
                 width: 100%;
                 height: auto;
                 aspect-ratio: 600/399;
+            }
+            .watermark-circle {
+                width: 40px;
+                height: 40px;
+                font-size: 8px;
             }
         }
 
@@ -46,37 +50,31 @@
             width: 100%;
             height: 100%;
             background: url('/assets/img/cover.jpg') center/cover;
-            border-radius: 0px;
+            border-radius: 20px;
             filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
         }
 
         .watermark-circle {
-            position: auto;
+            position: absolute;
             bottom: 30px;
             right: 30px;
-            width: 30px;
-            height: 30px;
+            width: 60px;
+            height: 60px;
             background: rgba(1, 248, 63, 0.8);
             border-radius: 50%;
-
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: Arial, sans-serif;
             font-weight: bold;
             color: rgb(84, 3, 113);
-            font-size: 6px;
+            font-size: 12px;
             text-align: center;
             line-height: 1.2;
             border: 2px solid #00B4D8;
         }
 
         @media (max-width: 767px) {
-            .watermark-circle {
-                width: 50px;
-                height: 50px;
-                font-size: 10px;
-            }
         }
     </style>
 </head>
@@ -90,7 +88,7 @@
 
             <div class="cover-wrapper">
                 <div class="cover-image"></div>
-                <div class="watermark-circle">onlymanes</div>
+                <div class="watermark-circle">only<br>manes</div>
             </div>
         </div>
     </div>
