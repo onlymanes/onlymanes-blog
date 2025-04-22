@@ -30,3 +30,7 @@ body::before {
     z-index: 1;
     background: transparent !important;
 }
+
+a {
+    color: #00B4D8 !important;
+}
