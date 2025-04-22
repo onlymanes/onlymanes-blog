@@ -5,8 +5,8 @@ layout: default
 <div class="about-section">
   <p>
     &emsp;&emsp;> About me:
-  <br><br>
-  <br>&emsp;&emsp;- Name: Helen?Z.
+  <br>
+  <br>&emsp;&emsp;- Name: Helen.Z
   <br>&emsp;&emsp;- I'm from Beijing, China and a permanent resident of Canada, living in Regina.
   <br>&emsp;&emsp;- My MBTI is INTJ, and my Constellation is Aquarius.
   <br>&emsp;&emsp;- My interests include music, singing, drawing, traveling, and many more!
