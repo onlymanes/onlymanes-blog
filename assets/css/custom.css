@@ -1,6 +1,6 @@
 html, 
 body {
-    background: rgba(247, 24, 214, 0.568) !important;
+    background: hsla(283, 95%, 31%, 0.93) !important;
     color: #032a5b !important;
     background-image: none !important;
 }
@@ -63,5 +63,5 @@ body {
     background-size: contain;
     opacity: 0.9;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+    box-shadow: 0 4px 15px #032a5b;
   }
