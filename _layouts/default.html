@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>onlymanes - Blog</title>
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/onlymanes-32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/onlymanes-16.png' | relative_url }}">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/onlymanes-180.png' | relative_url }}">
+    
+    <meta name="msapplication-TileImage" content="{{ '/assets/img/onlymanes-144.png' | relative_url }}">
+    
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+    <style>
+        @keyframes spin {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        
+        @media (hover: hover) and (pointer: fine) {
+            link[rel="icon"]:hover {
+                animation: spin 2s linear infinite;
+            }
+        }
+    </style>
 </head>
-<body>
-    <div class="logo-container">
-        <a href="/" class="logo-image"></a>
-    </div>
-
-    <div class="main-content">
-        {{ content }}
-    </div>
-    
-    <div class="cover-container">
-        <div class="cover-image"></div>
-    </div>
-    
-    {% include footer.html %}
-</body>
-</html>
