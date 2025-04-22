@@ -3,7 +3,6 @@ body {
     color: #00B4D8 !important;
 }
 
-/* 保持伪元素背景图设置 */
 body::before {
     content: "";
     position: fixed;
@@ -22,13 +21,11 @@ body::before {
 
 .rss-subscribe, .feed-subscribe {
     display: none !important;
-    visibility: hidden !important;
 }
 
 .main-content {
     position: relative;
     z-index: 1;
-    background: transparent !important;
     padding-left: 30px;
     max-width: 65%;
 }
@@ -37,8 +34,7 @@ a {
     color: #00B4D8 !important;
 }
 
-.post header,
-.post .post-content {
+.post header, .post .post-content {
     background: rgb(84, 3, 113) !important;
     position: relative;
     z-index: 2;
