@@ -15,9 +15,10 @@ layout: default
 </p>
 
 <ul class="post-list">
+  &emsp;&emsp;&emsp;
   {% for post in site.posts %}
     <li class="post-item">
-      &emsp;&emsp;&emsp;<a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
+      <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
