@@ -33,12 +33,14 @@
     </div>
     {% endif %}
 
-    <div class="cover-container">
-        <div class="cover-image"></div>
+    <div class="content-wrapper">
+        <div class="cover-container">
+            <div class="cover-image"></div>
+        </div>
+        
+        <main class="main-content">
+            {{ content }}
+        </main>
     </div>
-
-    <main class="main-content">
-        {{ content }}
-    </main>
 </body>
 </html>
