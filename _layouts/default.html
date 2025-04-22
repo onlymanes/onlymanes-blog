@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="/assets/css/extra.css">
-</head>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>onlymanes Blog</title>
+
+    <link rel="stylesheet" href="/assets/css/extra.css">
+
+    <link rel="icon" href="/assets/img/onlymanes.png" type="image/png">
+
     <style>
         .content-container {
             max-width: 1200px;
@@ -14,23 +18,10 @@
             padding: 30px;
         }
 
-        .text-section {
-            background: rgba(84, 3, 113, 0.9);
-            padding: 40px;
-            border-radius: 15px;
-        }
-
-        .cover-wrapper {
-            position: relative;
-            width: 600px;
-            height: 399px;
-            margin-left: 50px;
-        }
-
         @media (min-width: 992px) {
             .main-layout {
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
             }
         }
 
@@ -39,8 +30,15 @@
                 margin: 40px 0 0 0;
                 width: 100%;
                 height: auto;
-                aspect-ratio: 600/399;
+                aspect-ratio: 600 / 399;
             }
+        }
+
+        .cover-wrapper {
+            position: relative;
+            width: 600px;
+            height: 399px;
+            margin-left: 50px;
         }
 
         .cover-image {
@@ -72,6 +70,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="content-container">
         <div class="main-layout">
@@ -85,5 +84,8 @@
             </div>
         </div>
     </div>
+
+    {% include footer.html %}
 </body>
+
 </html>

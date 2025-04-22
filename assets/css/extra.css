@@ -1,8 +1,21 @@
+html, body {
+    background: #140022;
+    color: #00aaff;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, span, div {
+    color: inherit;
+}
+
+a, a:visited {
+    color: #00aaff;
+}
+
 @media (min-width: 992px) {
     .main-layout {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         gap: 40px;
     }
 
@@ -16,7 +29,7 @@
         width: 600px;
         height: 399px;
         position: sticky;
-        top: 30px;
+        top: calc(50vh - 200px);
     }
 }
 
@@ -38,7 +51,7 @@
     border-radius: 50%;
     background: rgba(1, 248, 63, 0.85);
     border: 2px solid #00B4D8;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +61,7 @@
     color: rgb(84, 3, 113);
     padding: 5px;
     text-transform: uppercase;
-    
+
     box-shadow: 0 3px 12px rgba(0,0,0,0.2);
     text-shadow: 0 1px 1px rgba(255,255,255,0.3);
 }
@@ -77,6 +90,7 @@
     backdrop-filter: blur(8px);
     transition: background 0.3s ease;
     box-shadow: 0 8px 30px -10px rgba(0,0,0,0.3);
+    background: rgba(84, 3, 113, 0.9);
 }
 
 .text-section:hover {
@@ -87,11 +101,11 @@
     .content-container {
         padding: 15px!important;
     }
-    
+
     .text-section {
         padding: 20px!important;
     }
-    
+
     .watermark-circle {
         width: 50px;
         height: 50px;
