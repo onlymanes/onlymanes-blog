@@ -5,6 +5,7 @@ html, body {
     font-family: system-ui, -apple-system, sans-serif;
 }
 
+/* Logo样式 */
 .logo-container {
     position: fixed;
     top: 25px;
@@ -20,6 +21,7 @@ html, body {
     filter: drop-shadow(0 2px 5px rgba(1, 248, 63, 0.6));
 }
 
+/* 响应式调整 */
 @media (max-width: 991px) {
     .logo-container {
         position: static;
@@ -28,6 +30,7 @@ html, body {
     }
 }
 
+/* 内容样式 */
 .post-section, .about-section {
     background: rgba(0, 0, 0, 0.2);
     padding: 25px;
