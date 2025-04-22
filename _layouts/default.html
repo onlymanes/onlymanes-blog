@@ -26,10 +26,12 @@
         }
     </style>
 </head>
-<body>
+<body class="{% if page.url == '/' %}homepage{% else %}article-page{% endif %}">
+    {% if page.url == '/' %}
     <div class="logo-container">
         <div class="logo-image"></div>
     </div>
+    {% endif %}
 
     <div class="cover-container">
         <div class="cover-image"></div>
@@ -38,9 +40,5 @@
     <main class="main-content">
         {{ content }}
     </main>
-
-    <div class="mobile-logo-link">
-        <a href="/" class="logo-image-mobile"></a>
-    </div>
 </body>
 </html>
