@@ -1,0 +1,107 @@
+@media (min-width: 992px) {
+    .main-layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .text-section {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .cover-wrapper {
+        flex-shrink: 0;
+        width: 600px;
+        height: 399px;
+        position: sticky;
+        top: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    .cover-wrapper {
+        margin-top: 2.5rem;
+        width: 100%!important;
+        height: auto!important;
+        aspect-ratio: 600/399;
+    }
+}
+
+.watermark-circle {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: rgba(1, 248, 63, 0.85);
+    border: 2px solid #00B4D8;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.15;
+    font: 600 14px/1.1 'Arial', sans-serif;
+    color: rgb(84, 3, 113);
+    padding: 5px;
+    text-transform: uppercase;
+    
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    text-shadow: 0 1px 1px rgba(255,255,255,0.3);
+}
+
+@media (max-width: 767px) {
+    .watermark-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 12px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+.cover-image {
+    transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    backface-visibility: hidden;
+}
+
+.cover-image:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(1, 248, 63, 0.25);
+}
+
+.text-section {
+    backdrop-filter: blur(8px);
+    transition: background 0.3s ease;
+    box-shadow: 0 8px 30px -10px rgba(0,0,0,0.3);
+}
+
+.text-section:hover {
+    background: rgba(84, 3, 113, 0.95);
+}
+
+@media (max-width: 480px) {
+    .content-container {
+        padding: 15px!important;
+    }
+    
+    .text-section {
+        padding: 20px!important;
+    }
+    
+    .watermark-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+        padding: 3px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cover-image {
+        transition: none;
+    }
+}

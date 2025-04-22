@@ -23,3 +23,17 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+
+
+<div class="content-container">
+    <div class="main-layout">
+        <div class="text-section">
+            <!-- ÄãµÄÎÄ×ÖÄÚÈÝ -->
+        </div>
+        
+        <div class="cover-wrapper">
+            <div class="cover-image"></div>
+            <div class="watermark-circle">only<br>manes</div>
+        </div>
+    </div>
+</div>
