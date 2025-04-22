@@ -26,4 +26,25 @@
         }
     </style>
 </head>
+<body>
+    <!-- 添加logo容器 -->
+    <div class="logo-container">
+        <div class="logo-image"></div>
+    </div>
+
+    <!-- 主要内容容器 -->
+    <div class="cover-container">
+        <div class="cover-image"></div>
+    </div>
+
+    <!-- 核心内容注入点 -->
+    <main class="main-content">
+        {{ content }}
+    </main>
+
+    <!-- 移动端logo链接 -->
+    <div class="mobile-logo-link">
+        <a href="/" class="logo-image-mobile"></a>
+    </div>
+</body>
 </html>

@@ -2,10 +2,6 @@
 layout: default
 ---
 
-<div class="mobile-logo-link">
-  <a href="/" class="logo-image-mobile"></a>
-</div>
-
 <div class="about-section">
   <p>
     &emsp;&emsp;> About me:

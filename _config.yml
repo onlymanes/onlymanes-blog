@@ -3,3 +3,11 @@ include:
   - _includes/footer.html
 baseurl: ""
 url: "https://onlymanes.ai"
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
