@@ -12,37 +12,71 @@
     <link rel="icon" href="/assets/img/onlymanes.png" type="image/png">
 
     <style>
-        .content-container{
-            max-width:1200px;margin:0 auto;padding:30px;
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
         }
 
-        @media (min-width: 992px){
-            .main-layout{display:flex;align-items:center;}
-        }
-        @media (max-width: 991px){
-            .cover-wrapper{margin:40px 0 0 0;width:100%;height:auto;aspect-ratio:600/399;}
+        @media (min-width: 992px) {
+            .main-layout {
+                display: flex;
+                align-items: center;
+            }
         }
 
-        .cover-wrapper{
+        @media (max-width: 991px) {
+            .cover-wrapper {
+                margin: 40px auto 0 auto;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 600/399;
+            }
+        }
+
+        .cover-wrapper {
             position: sticky;
-            top: calc(45vh - 200px);/
+            top: calc(45vh - 200px);
             width: 600px;
             height: 399px;
             margin-left: 50px;
         }
-        
-        .cover-image{
-            width:100%;height:100%;
-            background:url('/assets/img/cover.jpg') center/cover;
-            border-radius:20px;
-            filter:drop-shadow(0 8px 20px rgba(0,0,0,.3));
+
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            background: url('/assets/img/cover.jpg') center/cover;
+            border-radius: 20px;
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
         }
-        .watermark-circle{
-            position:absolute;bottom:30px;right:30px;width:80px;height:80px;
-            background:rgba(1,248,63,.8);border-radius:50%;
-            display:flex;align-items:center;justify-content:center;
-            font:700 14px/1.2 Arial,sans-serif;color:rgb(84,3,113);
-            border:2px solid #00B4D8;text-align:center;
+
+        .watermark-circle {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: rgba(1, 248, 63, 0.8);
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: rgb(84, 3, 113);
+            font-size: 12px;  /* ”… 14px Àı–°µΩ 12px */
+            text-align: center;
+            line-height: 1.2;
+            border: 2px solid #00B4D8;
+        }
+
+        @media (max-width: 767px) {
+            .watermark-circle {
+                width: 50px;
+                height: 50px;
+                font-size: 10px;
+            }
         }
     </style>
 </head>
