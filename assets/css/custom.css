@@ -3,10 +3,11 @@ body {
     color: #00B4D8 !important;
 }
 
+/* 保持伪元素背景图设置 */
 body::before {
     content: "";
     position: fixed;
-    left: 53%;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 600px;
