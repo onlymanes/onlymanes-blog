@@ -1,11 +1,10 @@
-include:
-  - assets/img/cover.jpg
-  - _includes/footer.html
-baseurl: ""
-url: "https://onlymanes.ai"
+# _config.yml
+title: onlymanes Blog
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+
 defaults:
   - scope:
       path: ""
