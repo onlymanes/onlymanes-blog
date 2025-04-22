@@ -18,6 +18,5 @@ html, body {
     margin: 0;
     background: #620286 !important;
     min-height: 100vh;
-    background-image: none !important;
 }
 </style>
