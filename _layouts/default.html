@@ -97,11 +97,6 @@
     {% include footer.html %}
 
     <script>
-        /**
-         * Randomly choose one of the 30 pre?generated cover images (1.jpg?¨C?30.jpg)
-         * stored in /assets/img and apply it to every element that previously used
-         * cover.jpg.  Existing layout & styles remain untouched.
-         */
         (function () {
             const TOTAL_IMAGES = 30;
             const randomIndex = Math.floor(Math.random() * TOTAL_IMAGES) + 1; // 1 ¨C 30
@@ -112,7 +107,6 @@
                     el.style.backgroundImage = `url('${imgUrl}')`;
                 });
 
-                // If you later add Open?Graph or Twitter preview tags, keep them in sync
                 const og = document.querySelector('meta[property="og:image"]');
                 if (og) og.setAttribute('content', imgUrl);
             });
