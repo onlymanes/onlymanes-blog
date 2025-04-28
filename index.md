@@ -30,31 +30,47 @@ layout: default
 
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+  import { getDatabase, ref, runTransaction, onValue } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyAETlOOjT2ulQn-JeUrNKdRMaYhR4o7D2k",
     authDomain: "onlymanes-blog.firebaseapp.com",
     databaseURL: "https://onlymanes-blog-default-rtdb.firebaseio.com",
     projectId: "onlymanes-blog",
-    storageBucket: "onlymanes-blog.firebasestorage.app",
+    storageBucket: "onlymanes-blog.appspot.com",
     messagingSenderId: "888926945739",
     appId: "1:888926945739:web:094a1e33c1f01512bb364e"
   };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const counterRef = ref(db, 'visitorCount');
+  try {
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
     
-    if (!sessionStorage.getItem('counted')) {
-      runTransaction(counterRef, (current) => (current || 0) + 1);
-      sessionStorage.setItem('counted', 'true');
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const counterRef = ref(db, 'visitorCount');
+      
+      if (!sessionStorage.getItem('counted')) {
+        runTransaction(counterRef, (current) => {
+          return (current === null ? 1 : current + 1);
+        }).catch((error) => {
+          console.error('Transaction error:', error);
+        });
+        sessionStorage.setItem('counted', 'true');
+      }
 
-    onValue(counterRef, (snapshot) => {
-      document.getElementById('visitorCount').textContent = snapshot.val();
+      onValue(counterRef, 
+        (snapshot) => {
+          document.getElementById('visitorCount').textContent = snapshot.val() || 0;
+        }, 
+        (error) => {
+          console.error('Listener error:', error);
+          document.getElementById('visitorCount').textContent = 'Offline';
+        }
+      );
     });
-  });
+
+  } catch (error) {
+    console.error('Firebase init error:', error);
+    document.getElementById('visitorCount').textContent = 'System Error';
+  }
 </script>

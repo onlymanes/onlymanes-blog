@@ -121,12 +121,9 @@ a, a:visited {
 }
 
 .visitor-counter {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: rgba(0,0,0,0.8);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 0.9em;
+  bottom: 15px;
+  right: 25px;
+  background: rgba(255,255,255,0.9);
+  color: #6a1b9a;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
