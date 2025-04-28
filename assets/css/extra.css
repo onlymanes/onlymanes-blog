@@ -119,3 +119,14 @@ a, a:visited {
         transition: none;
     }
 }
+
+.visitor-counter {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
