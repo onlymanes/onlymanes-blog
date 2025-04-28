@@ -28,32 +28,32 @@ layout: default
   Total Visitors: <span id="visitorCount">Loading...</span>
 </div>
 
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
 
-<script>
   const firebaseConfig = {
-  apiKey: "AIzaSyAETlOOjT2ulQn-JeUrNKdRMaYhR4o7D2k",
-  authDomain: "onlymanes-blog.firebaseapp.com",
-  projectId: "onlymanes-blog",
-  storageBucket: "onlymanes-blog.firebasestorage.app",
-  messagingSenderId: "888926945739",
-  appId: "1:888926945739:web:094a1e33c1f01512bb364e",
-  measurementId: "G-NVQPRSXNKM"
-};
-  
-  firebase.initializeApp(firebaseConfig);
-  
+    apiKey: "AIzaSyAETlOOjT2ulQn-JeUrNKdRMaYhR4o7D2k",
+    authDomain: "onlymanes-blog.firebaseapp.com",
+    databaseURL: "https://onlymanes-blog-default-rtdb.firebaseio.com",
+    projectId: "onlymanes-blog",
+    storageBucket: "onlymanes-blog.firebasestorage.app",
+    messagingSenderId: "888926945739",
+    appId: "1:888926945739:web:094a1e33c1f01512bb364e"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
   document.addEventListener('DOMContentLoaded', () => {
-    const db = firebase.database();
-    const counterRef = db.ref('visitorCount');
+    const counterRef = ref(db, 'visitorCount');
     
     if (!sessionStorage.getItem('counted')) {
-      counterRef.transaction(current => (current || 0) + 1);
+      runTransaction(counterRef, (current) => (current || 0) + 1);
       sessionStorage.setItem('counted', 'true');
     }
 
-    counterRef.on('value', snapshot => {
+    onValue(counterRef, (snapshot) => {
       document.getElementById('visitorCount').textContent = snapshot.val();
     });
   });
